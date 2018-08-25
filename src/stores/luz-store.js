@@ -20,16 +20,16 @@ export default function createLuzStore(logger) {
         return null
       }
 
-      let luz = spawn(path.join(__dirname, '../luzb/luz'), ['on'])
+      let luz = spawn(path.join(__dirname, '../luzb/luz'), [option])
 
       luz.on('exit', function(code, signal) {
         console.log(
           'child process exited with ' + `code ${code} and signal ${signal}`
         )
-        return {
-          found
-        }
       })
+      return {
+        found
+      }
     },
 
     async status() {
