@@ -1,0 +1,3 @@
+[submodule "src/luzb"]
+	path = src/luzb
+	url = https://github.com/andrrrl/luzb
